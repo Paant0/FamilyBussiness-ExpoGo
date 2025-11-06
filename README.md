@@ -61,3 +61,4 @@ familybussiness ahora en expo go
 # Control de versiones
 
 #### dentro del proyecto existen diferentes ramas como principalmente **main**, a partir de main sigue **test**, a partir de test, **dev** a partir de dev se  crea otra **rama para cada integrante del equipo**: (dev-nombre-estudiante)
+## cree el proyecto hoy 6/11/25
