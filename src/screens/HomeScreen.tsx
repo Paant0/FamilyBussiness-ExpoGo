@@ -3,7 +3,9 @@ import { ScrollView, View, Text, ActivityIndicator, TouchableOpacity } from "rea
 import HeroSection from "../components/HeroSection";
 import BenefitsSection from "../components/BenefitsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
+
 import { styles } from "../styles/homeStyles";
+import { CTASection } from "../components/CTASection";
 
 export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +29,7 @@ export default function HomeScreen() {
       <HeroSection />
       <BenefitsSection />
       <TestimonialsSection />
+      <CTASection />
 
       <View style={styles.ctaFinal}>
         <Text style={styles.ctaTitle}>

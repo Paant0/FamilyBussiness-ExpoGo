@@ -176,3 +176,87 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+// CTA SECTION
+export const homeStyles = StyleSheet.create({
+  /* ===== CONTAINER GENERAL ===== */
+  ctaContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap",
+    padding: 30,
+    backgroundColor: "#dce5df",
+  },
+
+  ctaLeft: {
+    flex: 1,
+    minWidth: "48%",
+  },
+
+  ctaLogo: {
+    width: 260,
+    height: 80,
+    marginBottom: 25,
+  },
+
+  ctaHeadline: {
+    fontSize: 26,
+    color: "#35765c",
+    fontWeight: "700",
+    marginBottom: 10,
+  },
+
+  ctaSubheadline: {
+    fontSize: 16,
+    marginBottom: 20,
+    color: "#1e1e1e",
+    textDecorationLine: "underline",
+  },
+
+  ctaBenefit: {
+    fontSize: 15,
+    marginVertical: 5,
+  },
+
+  /* ===== BOTÓN ===== */
+  ctaButtonContainer: {
+    alignItems: "center",
+    marginTop: 20,
+  },
+
+  ctaButton: {
+    backgroundColor: "#1e1e1e",
+    paddingVertical: 18,
+    paddingHorizontal: 70,
+    borderRadius: 30,
+    marginBottom: 5,
+    elevation: 5, // sombra Android
+  },
+
+  ctaButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
+  ctaClickText: {
+    marginTop: 8,
+    fontSize: 13,
+    color: "#1e1e1e",
+    textAlign: "center",
+  },
+
+  ctaRight: {
+    flex: 1,
+    minWidth: "48%",
+    alignItems: "center",
+    marginTop: 20,
+  },
+
+  ctaBanner: {
+    width: "100%",
+    height: 250,
+    borderRadius: 12,
+  },
+});
+
