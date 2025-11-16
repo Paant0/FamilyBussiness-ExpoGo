@@ -1,6 +1,24 @@
 import React from "react";
-import HomeScreen from "./src/screens/HomeScreen";
+import { View, StyleSheet } from "react-native";
+import { UserProvider, useUser } from "./context/UserContext";
+import Home from "./components/Home";
+import Login from "./components/login";
+
+function MainApp() {
+  const { user } = useUser();
+  return <View style={styles.container}>{user ? <Home /> : <Login />}</View>;
+}
 
 export default function App() {
-  return <HomeScreen />;
+  return (
+    <UserProvider>
+      <MainApp />
+    </UserProvider>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
