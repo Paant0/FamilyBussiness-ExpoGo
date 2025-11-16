@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView, View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
-import HeroSection from "../components/HeroSection";
-import BenefitsSection from "../components/BenefitsSection";
-import TestimonialsSection from "../components/TestimonialsSection";
-
+import HeroSection from "./HeroSection";
+import BenefitsSection from "./BenefitsSection";
+import TestimonialsSection from "./TestimonialsSection";
 import { styles } from "../styles/homeStyles";
-import { CTASection } from "../components/CTASection";
+import { CTASection } from "./CTASection";
+import FAB from "./FAB";
+import { useUser } from "../../context/UserContext";
 
 export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
+  const { user, logout } = useUser();
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -30,20 +32,8 @@ export default function HomeScreen() {
       <BenefitsSection />
       <TestimonialsSection />
       <CTASection />
-
       <View style={styles.ctaFinal}>
-        <Text style={styles.ctaTitle}>
-          Comienza tu viaje hacia una vida financiera más estable
-        </Text>
-        <Text style={styles.ctaText}>
-          Regístrate hoy y descubre lo fácil que es administrar tu dinero.
-        </Text>
-        <TouchableOpacity
-          style={styles.btnSecundario}
-          onPress={() => alert("Función en desarrollo 🚧")}
-        >
-          <Text style={styles.btnSecundarioText}>Crear cuenta ahora</Text>
-        </TouchableOpacity>
+        <FAB label="Cerrar sesión" onPress={logout} backgroundColor="#292826" />
       </View>
     </ScrollView>
   );

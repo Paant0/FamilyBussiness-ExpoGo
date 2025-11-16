@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View, TextInput, Text, Image, StyleSheet, Pressable, Alert } from "react-native";
+import { useUser } from "../../context/UserContext";
 import FAB from "./FAB";
-import { useUser } from "../context/UserContext";
+
 
 export default function Login() {
   const [nombre, setNombre] = useState("");
