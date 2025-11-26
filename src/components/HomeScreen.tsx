@@ -7,6 +7,7 @@ import { styles } from "../styles/homeStyles";
 import { CTASection } from "./CTASection";
 import FAB from "./FAB";
 import { useUser } from "../../context/UserContext";
+import Caracteristicas from "./caracteristicas";
 
 export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ export default function HomeScreen() {
       <HeroSection />
       <BenefitsSection />
       <TestimonialsSection />
+      <Caracteristicas/>
       <CTASection />
       <View style={styles.ctaFinal}>
         <FAB label="Cerrar sesión" onPress={logout} backgroundColor="#292826" />

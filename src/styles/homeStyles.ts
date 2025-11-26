@@ -176,6 +176,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
 // CTA SECTION
 export const homeStyles = StyleSheet.create({
   /* ===== CONTAINER GENERAL ===== */
@@ -260,3 +261,130 @@ export const homeStyles = StyleSheet.create({
   },
 });
 
+export const caracteristicasStyles = StyleSheet.create({
+  container: {
+    padding: 20,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+
+  hero: {
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  heroTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  heroSubtitle: {
+    fontSize: 14,
+    color: '#555',
+    textAlign: 'center',
+    marginTop: 5,
+  },
+
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 10,
+  },
+  card: {
+    width: '45%',
+    backgroundColor: '#f3f3f3',
+    padding: 15,
+    borderRadius: 10,
+    margin: 5,
+    alignItems: 'center',
+  },
+  icon: {
+    fontSize: 30,
+  },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 10,
+  },
+  cardText: {
+    textAlign: 'center',
+    color: '#333',
+    marginTop: 5,
+  },
+
+  beneficios: {
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  beneficiosImg: {
+    width: 300,
+    height: 180,
+    borderRadius: 10,
+  },
+  beneficiosTexto: {
+    marginTop: 15,
+    alignItems: 'center',
+  },
+
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  sectionText: {
+    fontSize: 14,
+    color: '#555',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+
+  btnPrimary: {
+    backgroundColor: '#007bff',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+  },
+  btnSecondary: {
+    backgroundColor: '#00b894',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+  },
+  btnText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+
+  metricas: {
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  metricaItem: {
+    marginVertical: 10,
+    alignItems: 'center',
+  },
+  metricaNumber: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  metricaLabel: {
+    fontSize: 14,
+    color: '#555',
+  },
+
+  botonesContador: {
+    flexDirection: 'row',
+    gap: 10,
+    marginTop: 10,
+  },
+  counterBtn: {
+    backgroundColor: '#e0e0e0',
+    padding: 10,
+    borderRadius: 8,
+  },
+
+  cta: {
+    marginTop: 40,
+    alignItems: 'center',
+  },
+});
