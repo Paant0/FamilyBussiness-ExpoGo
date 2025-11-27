@@ -29,19 +29,14 @@ export default function HomeScreen() {
       <TestimonialsSection />
 
       <View style={styles.ctaFinal}>
-        <Text style={styles.ctaTitle}>
-          Comienza tu viaje hacia una vida financiera más estable
-        </Text>
-        <Text style={styles.ctaText}>
-          Regístrate hoy y descubre lo fácil que es administrar tu dinero.
-        </Text>
-        <TouchableOpacity
-          style={styles.btnSecundario}
-          onPress={() => alert("Función en desarrollo 🚧")}
-        >
-          <Text style={styles.btnSecundarioText}>Crear cuenta ahora</Text>
-        </TouchableOpacity>
-      </View>
+  <Text style={styles.ctaTitle}>
+    Comienza tu viaje hacia una vida financiera más estable
+  </Text>
+  <Text style={styles.ctaText}>
+    Regístrate hoy y descubre lo fácil que es administrar tu dinero.
+  </Text>
+</View>
+
     </ScrollView>
   );
 }
