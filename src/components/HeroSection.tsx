@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import { styles } from "../styles/homeStyles";
+import { getStyles } from "../styles/homeStyles";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function HeroSection() {
   const [pressed, setPressed] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const styles = getStyles(theme);
 
   return (
     <View style={styles.heroSection}>
       <View style={styles.heroText}>
         <Text style={styles.heroTitle}>FamilyBusiness</Text>
         <Text style={styles.heroSubtitle}>
-          Organiza tus finanzas familiares de forma fácil y segura 💰
+          Organiza tus finanzas familiares de forma fácil y segura
         </Text>
         <Text style={styles.heroDescription}>
           FamilyBusiness ayuda a personas entre 36 y 45 años a tomar el control
@@ -23,7 +26,7 @@ export default function HeroSection() {
           onPress={() => setPressed(!pressed)}
         >
           <Text style={styles.btnPrimaryText}>
-            {pressed ? "¡Listo!🚀" : "Comienza gratis"}
+            {pressed ? "Listo" : "Comienza gratis"}
           </Text>
         </TouchableOpacity>
       </View>

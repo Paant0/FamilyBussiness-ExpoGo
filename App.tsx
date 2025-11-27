@@ -2,8 +2,8 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { UserProvider, useUser } from "./context/UserContext";
 import Login from "./src/components/login";
-import Home from "./src/components/Home";
 import HomeScreen from "./src/components/HomeScreen";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function MainApp() {
   const { user } = useUser();
@@ -13,7 +13,9 @@ function MainApp() {
 export default function App() {
   return (
     <UserProvider>
+    <ThemeProvider>
       <MainApp />
+    </ThemeProvider>
     </UserProvider>
   );
 }

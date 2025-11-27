@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { styles } from "../styles/homeStyles";
+import { getStyles } from "../styles/homeStyles";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function TestimonialsSection() {
+  const { theme, toggleTheme } = useTheme();
+  const styles = getStyles(theme);
   return (
     <View style={styles.testimonios}>
       <Text style={styles.sectionTitle}>Lo que dicen nuestros usuarios</Text>
