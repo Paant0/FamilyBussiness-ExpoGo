@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { getStyles } from "../styles/homeStyles";
 import { ScrollView, View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
 import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
 import TestimonialsSection from "./TestimonialsSection";
-import { getStyles } from "../styles/homeStyles";
-import FAB from "./FAB";
-import { useUser } from "../../context/UserContext";
 import Caracteristicas from "./caracteristicas";
 import CTASection from "./CTASection";
+import FAB from "./FAB";
 import { useTheme } from "../../context/ThemeContext";
+import { useUser } from "../../context/UserContext";
 
 export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
-  const { user, logout } = useUser();
+  const { logout } = useUser();
   const { theme, toggleTheme } = useTheme();
   const styles = getStyles(theme);
 
@@ -62,7 +62,7 @@ export default function HomeScreen() {
           onPress={logout}
           backgroundColor="#292826"
         />
-      </View>
-    </ScrollView>
-  );
+          </View>
+        </ScrollView>
+        );
 }
