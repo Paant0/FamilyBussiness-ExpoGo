@@ -23,7 +23,8 @@ Está diseñada para ofrecer una experiencia visual clara, moderna y enfocada en
 3. TestimonialsSection
 - Opiniones reales de usuarios.
 - Presenta nombre, comentario y a veces avatar.
-4.Caracteristicas
+- 
+4. Caracteristicas
 - caracteristicas de la aplicacion
 - Apartado con beneficios
 - Estadisticas de usuarios Satisfechos 
