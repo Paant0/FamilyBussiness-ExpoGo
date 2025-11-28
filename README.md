@@ -23,8 +23,13 @@ Está diseñada para ofrecer una experiencia visual clara, moderna y enfocada en
 3. TestimonialsSection
 - Opiniones reales de usuarios.
 - Presenta nombre, comentario y a veces avatar.
-
-4. CTASection
+- 
+4.Caracteristicas
+-caracteristicas de la aplicacion
+-Apartado con beneficios
+-Estadisticas de usuarios Satisfechos 
+   
+5. CTASection
 - Una llamada a la acción clara.
 - Contiene un botón de registro para avanzar en el flujo de usuario.
 
@@ -32,10 +37,10 @@ Está diseñada para ofrecer una experiencia visual clara, moderna y enfocada en
 - React Native
 - ExpoGo
 - Hooks
+- GlobalContext
 - StyleSheet para estilos
 
 ### Características principales
-- Diseño moderno y responsivo.
-- Animación simple en el botón principal.
+- Diseño moderno.
 - Tarjetas con sombras en iOS y Android.
 - Scroll vertical completo.
