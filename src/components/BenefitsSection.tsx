@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { styles } from "../styles/homeStyles";
+import { getStyles } from "../styles/homeStyles";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function BenefitsSection() {
+  const { theme, toggleTheme } = useTheme();
+  const styles = getStyles(theme);
   return (
     <View style={styles.benefitsSection}>
       <Text style={styles.sectionTitle}>¿Por qué elegir FamilyBusiness?</Text>
@@ -26,7 +29,6 @@ export default function BenefitsSection() {
         </View>
 
         <View style={styles.benefitCard}>
-          <Text style={styles.icon}>💡</Text>
           <Text style={styles.benefitTitle}>Recomendaciones inteligentes</Text>
           <Text style={styles.benefitText}>
             Recibe sugerencias personalizadas para ahorrar y optimizar tus gastos.

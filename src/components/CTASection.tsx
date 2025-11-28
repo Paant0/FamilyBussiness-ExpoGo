@@ -1,51 +1,56 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import { homeStyles } from "../styles/homeStyles";
+import { getStyles } from "../styles/homeStyles";
+import { useTheme } from "../../context/ThemeContext";
 
-export const CTASection = () => {
+export default function CTASection() {
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
+
   return (
-    <View style={homeStyles.ctaContainer}>
-      <View style={homeStyles.ctaLeft}>
-        
+    <View style={styles.ctaContainer}>
+
+      {/* IZQUIERDA */}
+      <View style={styles.ctaLeft}>
         <Image
           source={require("../../assets/logo.png")}
-          style={homeStyles.ctaLogo}
+          style={styles.ctaLogo}
           resizeMode="contain"
         />
 
-        <Text style={homeStyles.ctaHeadline}>
+        <Text style={styles.ctaHeadline}>
           Organiza tus ingresos y gastos{"\n"}de manera simple.
         </Text>
 
-        <Text style={homeStyles.ctaSubheadline}>
+        <Text style={styles.ctaSubheadline}>
           Empieza a ahorrar hoy mismo y alcanza tus metas familiares sin estrés.
         </Text>
 
         <View>
-          <Text style={homeStyles.ctaBenefit}>✅ 100% gratis y fácil de usar</Text>
-          <Text style={homeStyles.ctaBenefit}>💳 Controla tus finanzas familiares</Text>
-          <Text style={homeStyles.ctaBenefit}>📈 Visualiza tus avances al instante</Text>
-          <Text style={homeStyles.ctaBenefit}>🔒 Tus datos siempre seguros</Text>
+          <Text style={styles.ctaBenefit}>• 100% gratis y fácil de usar</Text>
+          <Text style={styles.ctaBenefit}>• Controla tus finanzas familiares</Text>
+          <Text style={styles.ctaBenefit}>• Visualiza tus avances al instante</Text>
+          <Text style={styles.ctaBenefit}>• Tus datos siempre seguros</Text>
         </View>
 
-        <View style={homeStyles.ctaButtonContainer}>
-          <TouchableOpacity style={homeStyles.ctaButton}>
-            <Text style={homeStyles.ctaButtonText}>Crear mi cuenta gratis</Text>
+        <View style={styles.ctaButtonContainer}>
+          <TouchableOpacity style={styles.ctaButton}>
+            <Text style={styles.ctaButtonText}>Crear mi cuenta gratis</Text>
           </TouchableOpacity>
 
-          <Text style={homeStyles.ctaClickText}>↑</Text>
-          <Text style={homeStyles.ctaClickText}>Click Aquí</Text>
+          <Text style={styles.ctaClickText}>↑</Text>
+          <Text style={styles.ctaClickText}>Click Aquí</Text>
         </View>
       </View>
 
-      <View style={homeStyles.ctaRight}>
+      {/* DERECHA */}
+      <View style={styles.ctaRight}>
         <Image
           source={require("../../assets/dinero.png")}
-          style={homeStyles.ctaBanner}
+          style={styles.ctaBanner}
           resizeMode="cover"
         />
       </View>
-
     </View>
   );
-};
+}

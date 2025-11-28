@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { UserProvider, useUser } from "./context/UserContext";
 import Login from "./src/components/login";
-import Home from "./src/components/Home";
+import { ThemeProvider } from "./context/ThemeContext";
 import HomeScreen from "./src/components/HomeScreen";
 
 function MainApp() {
@@ -13,7 +13,9 @@ function MainApp() {
 export default function App() {
   return (
     <UserProvider>
+    <ThemeProvider>
       <MainApp />
+    </ThemeProvider>
     </UserProvider>
   );
 }
